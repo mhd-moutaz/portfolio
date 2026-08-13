@@ -3,6 +3,7 @@ import Script from "next/script";
 import { IBM_Plex_Mono, Inter, Tajawal } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "./components/providers";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({
   variable: "--font-inter",
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {languageBootstrap}
         </Script>
         <LanguageProvider>{children}</LanguageProvider>
+        <GoogleAnalytics gaId="G-XC6BL1T1LP" />
       </body>
     </html>
   );
